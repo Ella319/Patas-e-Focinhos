@@ -52,7 +52,7 @@ bem-estar e hospedagem pet, oferecendo uma experiência para conhecer os serviç
 
 | Nome Completo | RA |
 | :--- | :---: |
-| Igor Rocha dos Santos | `Preencher RA` |
+| Igor Rocha dos Santos | `3126100848` |
 | Gabriella Cristina Ramalho Sobrinho | `3026105485` |
 | Saufi Phatar Micilien | `3026103388` |
 | João Pedro Monteiro Nascimento | `3025106009` |
