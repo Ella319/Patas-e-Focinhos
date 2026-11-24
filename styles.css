@@ -1,24 +1,23 @@
-/* =====================================================================
-   1. VARIÁVEIS GLOBAIS (cores, texturas, raio) E TEMA ESCURO
-   ===================================================================== */
+/* 1. VARIÁVEIS GLOBAIS (cores, texturas, raio) E TEMA ESCURO */
+
 :root{
   /* Paleta da marca */
   --orange:#F37135; --blue:#2d5399; --teal:#167e8a;
 
   ---teal:#10454b;
+}
 
-  
-  /* Cores de fundo, texto e bordas (tema claro) */
-  --bg:#F7FAFB; --bg-soft:#EAF1F4; --surface:#FFFFFF;
-  --ink:#122A4D; --ink-soft:#5B7086; --line:#DCE7ED;
+/* Responsável pela cor do site */
+:root {
+  color-scheme: dark;
+  --bg:#45929A; --bg-soft:#233f6b; --surface:#1d3758;
+  --ink:#EAF1FA; --ink-soft:#9FB3C8; --line:#3c8088;
+  --ink-softt:#d1d9e0;
+  --heading:#fff; --brand-color:var(--orange);
 
-  /* Cor dos títulos e do nome da marca. No tema escuro mudam para branco/laranja,
-     então os títulos usam estas variáveis em vez de repetir regras para o modo escuro. */
-  --heading:var(--blue);
-  --brand-color:var(--blue);
 
-  /* Texturas de fundo: patinha + osso em SVG, bem transparentes (azul no claro, branco no escuro) */
-  --tex-brand:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%0A%3Cg%20fill%3D%22%233159A6%22%20fill-opacity%3D%220.05%22%3E%0A%3Cg%20transform%3D%22translate%2818%2C22%29%20rotate%28-18%29%20scale%280.62%29%22%3E%0A%3Cellipse%20cx%3D%2232%22%20cy%3D%2242%22%20rx%3D%2216%22%20ry%3D%2214%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2222%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%2212%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2249%22%20cy%3D%2216%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2255%22%20cy%3D%2234%22%20rx%3D%226.5%22%20ry%3D%228.5%22/%3E%0A%3C/g%3E%0A%3Cg%20transform%3D%22translate%2896%2C92%29%20rotate%2824%29%20scale%280.5%29%22%3E%0A%3Crect%20x%3D%2214%22%20y%3D%2212%22%20width%3D%2236%22%20height%3D%228%22%20rx%3D%224%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2222%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2222%22%20r%3D%227%22/%3E%0A%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E");
+  /* Texturas de fundo: patinha + osso em SVG, bem transparentes */
+  --tex-brand:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%0A%3Cg%20fill%3D%22%233159A6%22%20fill-opacity%3D%220.20%22%3E%0A%3Cg%20transform%3D%22translate%2818%2C22%29%20rotate%28-18%29%20scale%280.62%29%22%3E%0A%3Cellipse%20cx%3D%2232%22%20cy%3D%2242%22%20rx%3D%2216%22%20ry%3D%2214%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2222%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%2212%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2249%22%20cy%3D%2216%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2255%22%20cy%3D%2234%22%20rx%3D%226.5%22%20ry%3D%228.5%22/%3E%0A%3C/g%3E%0A%3Cg%20transform%3D%22translate%2896%2C92%29%20rotate%2824%29%20scale%280.5%29%22%3E%0A%3Crect%20x%3D%2214%22%20y%3D%2212%22%20width%3D%2236%22%20height%3D%228%22%20rx%3D%224%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2222%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2222%22%20r%3D%227%22/%3E%0A%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E");
   --tex-white:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%0A%3Cg%20fill%3D%22%23FFFFFF%22%20fill-opacity%3D%220.09%22%3E%0A%3Cg%20transform%3D%22translate%2818%2C22%29%20rotate%28-18%29%20scale%280.62%29%22%3E%0A%3Cellipse%20cx%3D%2232%22%20cy%3D%2242%22%20rx%3D%2216%22%20ry%3D%2214%22/%3E%3Cellipse%20cx%3D%2212%22%20cy%3D%2222%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2230%22%20cy%3D%2212%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2249%22%20cy%3D%2216%22%20rx%3D%227%22%20ry%3D%229%22/%3E%3Cellipse%20cx%3D%2255%22%20cy%3D%2234%22%20rx%3D%226.5%22%20ry%3D%228.5%22/%3E%0A%3C/g%3E%0A%3Cg%20transform%3D%22translate%2896%2C92%29%20rotate%2824%29%20scale%280.5%29%22%3E%0A%3Crect%20x%3D%2214%22%20y%3D%2212%22%20width%3D%2236%22%20height%3D%228%22%20rx%3D%224%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%2222%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2210%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2254%22%20cy%3D%2222%22%20r%3D%227%22/%3E%0A%3C/g%3E%0A%3C/g%3E%0A%3C/svg%3E");
 
   --radius:22px;                                   /* arredondamento padrão dos cards */
@@ -27,21 +26,6 @@
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
-}
-
-/* Tema escuro automático: segue o sistema, a menos que a página force data-theme="light" */
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#45929A; --bg-soft:#233f6b; --surface:#1d3758;
-    --ink:#EAF1FA; --ink-soft:#9FB3C8; --line:#3c8088;
-    --heading:#fff; --brand-color:var(--orange);
-  }
-}
-/* Tema escuro forçado manualmente via data-theme="dark" */
-:root[data-theme="dark"]{
-  --bg:#0E1A2B; --bg-soft:#1b3153; --surface:#152943;
-  --ink:#EAF1FA; --ink-soft:#9FB3C8; --line:#223a58;
-  --heading:#fff; --brand-color:var(--orange);
 }
 
 /* =====================================================================
@@ -167,14 +151,14 @@ nav.wrap{
 .nav-right{
   display: flex; 
   align-items: center; 
-  gap: 34rem;
+  gap: 35rem;
 }
 
 .nav-links{
   display:flex; 
   align-items: center; 
   gap: 2rem; 
-  font-size:0.98rem; 
+  font-size:.98rem; 
   font-weight:500;
 }
 
@@ -237,12 +221,12 @@ nav.wrap{
 }
 
 /* Mobile: o menu vira um painel de tela cheia que desce do topo (classe .open aberta pelo JS) */
-/* @media (max-width:900px){
+ @media (max-width:900px){
   .nav-links{
     position:fixed; inset:74px 0 0 0; background:var(--bg);
     flex-direction:column; padding:2rem 24px; gap:1.4rem; font-size:1.1rem;
     transform:translateY(-110%); transition:transform .3s ease;      /* escondido acima da tela */
-    /*height:calc(100vh - 74px);
+    height:calc(100vh - 74px);
   }
   .nav-links.open{
     transform:translateY(0);
@@ -252,9 +236,6 @@ nav.wrap{
     display:flex;
   }
 }
-
-1910
-
 /* =====================================================================
    4. HERO (seção inicial)
    ===================================================================== */
@@ -355,10 +336,21 @@ nav.wrap{
 .btn-primary{ /* "Faça seu agendamento" */
   background:#fff; 
   color:var(--blue);
-}                                              
+}                   
+
+.btn-primary:hover{ /* "Faça seu agendamento" */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(200, 248, 248, 0.15);
+} 
+
 .btn-whats{ /* WhatsApp (verde) */
   background:#22C35E; 
   color:#fff;
+}
+
+.btn-whats:hover{ /* WhatsApp (verde) */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(43, 255, 1, 0.15);
 }
 
 .btn-insta{ /* Instagram (degradê) */
@@ -366,10 +358,20 @@ nav.wrap{
   color:#fff;
 } 
 
+.btn-insta:hover{ /* Instagram (degradê) */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(252, 61, 245, 0.15);
+} 
+
 .btn-ghost{ /* "Ver serviços" */
   border:1.5px solid rgba(255,255,255,.5); 
   background:rgba(255,255,255,.08); 
   color:#fff;
+}
+
+.btn-ghost:hover{ /* "Ver serviços" */
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(232, 248, 229, 0.15);
 }  
 
 .btn svg{
@@ -499,6 +501,7 @@ nav.wrap{
   box-shadow:0 18px 1px 5px rgba(24, 187, 152, 0.22);
 }
 
+
 .card .icon{ 
   width:50px; 
   height:50px; 
@@ -522,7 +525,13 @@ nav.wrap{
   height:26px; 
   color:var(--teal);
 }
-.card h3{
+
+.card .icon:hover {
+  fill: #1c5d88;
+  transition: all 0.6s ease-in-out;
+}
+
+/* .card h3{
   font-size:1.12rem; 
   margin-bottom:8px;
 }
@@ -582,7 +591,7 @@ nav.wrap{
 }           
 
 .sobre-text p{
-  color:var(--ink-soft); 
+  color:var(--ink-softt); 
   margin-top:16px;
 }
 
@@ -614,7 +623,6 @@ nav.wrap{
   justify-content: center;
   display: block;
   width: 100%;
-  max-width: 1000px;
   height: auto;
   gap: 15px;
 
@@ -629,6 +637,38 @@ nav.wrap{
 /* =====================================================================
    8. AGENDAMENTO
    ===================================================================== */
+
+.custom-shape-divider-top-1794052356 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1794052356 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 80px;
+}
+
+.custom-shape-divider-top-1794052356 .shape-fill {
+    fill: #45929A;
+}
+
+.caramelos {
+  display: flex;
+  width: 400px;          /* Ajuste a largura que você quer */
+  object-fit: cover;     /* Corta a foto sem distorcer */
+  margin-bottom: 5px;   /* Espaço entre a foto de cima e a de baixo */
+  border-radius: 50px;
+
+  box-shadow: 0 0 25px #394ca0; 
+
+}
+   
 
 #agendamento{
   background-color:var(--surface); 
@@ -661,31 +701,105 @@ nav.wrap{
 .agenda-art{
   position:relative; 
   aspect-ratio:1/1; 
-  display:flex; align-items:center; 
+  display:flex; 
+  align-items:center; 
   justify-content:center;
 }
 
+.agenda-art img,
 .cachorro-agendamento img{
   position: relative;
   z-index: 5;
   width: 100%;
+
 }
 
-.agenda-art .ring
-{position:absolute; 
+.agenda-art .ring{
+  position:absolute; 
   inset:8%; 
   border-radius:50%; 
   background:linear-gradient(135deg,var(--orange),var(--teal)); opacity:.16;
+  opacity: .16;
+  z-index: 1;
+
 }
 
 .agenda-art svg.paws-deco{
   position:absolute;
 }
 
+.spapet {
+  display: flex;
+  width: 500px;          /* Ajuste a largura que você quer */
+  height: 290px;         /* Ajuste a altura para o corte retangular */
+  object-fit: cover;     /* Corta a foto sem distorcer */
+  margin-bottom: 10px;   /* Espaço entre a foto de cima e a de baixo */
+  border-radius: 50px;
+
+  box-shadow: 0 0 25px #F37135; 
+}
+
+.spapet:last-child {
+  margin-bottom: 0;
+}
+
+
+.widget{
+  grid-row: 1 / 3;
+  grid-row: 1 / 3;
+
+}
+
+/* =====================================================================
+   8. Avaliações
+   ===================================================================== */
+
+.custom-shape-divider-top-1794052727 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1794052727 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1794052727 .shape-fill {
+    fill: #1D3758;
+}
+
 /* =====================================================================
    9. CONTATO (cards de contato, horários e mapa)
    ===================================================================== */
-   
+
+.custom-shape-divider-top-1794052983 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1794052983 svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 90px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1794052983 .shape-fill {
+    fill: #45929A;
+}
+
 #contato{
   background-color:var(--bg-soft); 
   background-image:var(--tex-brand); 
@@ -751,6 +865,35 @@ nav.wrap{
   flex-wrap:wrap;
 }
 
+.card{
+  min-width: 240px; 
+  background:var(--surface); 
+  border:1px solid var(--line); 
+  border-radius:var(--radius); 
+  box-shadow: 0 0 25px rgba(61, 114, 211, 0.4); 
+  padding:28px; 
+  transition:transform .2s,box-shadow .2s;
+}
+
+.contact-card, .map-card, .hours-card{
+  transition: transform 0.7s ease, box-shadow 0.3s ease;
+  background:var(--surface); 
+  border:1px solid var(--line); 
+  border-radius:var(--radius); 
+  padding:30px; 
+  box-shadow: 0 0 25px rgba(61, 114, 211, 0.6); 
+}
+
+
+.contact-card:hover,
+.map-card:hover, 
+.hours-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(3, 3, 3, 0.15);
+  
+}
+
+
 
 
 /* Horários: grade de "azulejos" por dia da semana */
@@ -807,7 +950,7 @@ nav.wrap{
 footer{
   background:var(--blue); 
   color:#DCE7F5; 
-  padding:56px 0 32px;
+  padding:60px 0 32px;
 }
 
 footer .wrap{
@@ -860,31 +1003,176 @@ footer .brand{
 }
 
 /* =====================================================================
-   11. RESPONSIVO (telas pequenas)
+   11. RESPONSIVO (substitui TODA a seção 11 antiga, até o final do CSS)
+   Breakpoints usados:  1699 / 1639 / 1187 / 1100 / 900 / 600 / 480 / 420
    ===================================================================== */
 
-@media (max-width:760px){
-  /* Layouts de 2 colunas viram 1 coluna */
+/* Cabeçalho: antes os itens eram separados por gap:35rem (560px) e passavam da tela.
+   Agora o espaço entre logo, menu e redes é distribuído automaticamente (space-between). */
+.nav-right{
+  justify-content:space-between;
+  gap:1.5rem;
+  height:74px;
+  padding:0 40px;
+}
 
-  .hero .wrap, #sobre .wrap, .contact-grid, #agendamento .wrap{
-    grid-template-columns:1fr;
-  }
+/* Mapa: o iframe tinha 600px fixos e saía do card. Agora acompanha a largura do card. */
+.map-frame iframe{
+  display:block;
+  width:100%;
+  height:450px;
+  border-radius:14px;
+}
 
-  .hero-photo{
-    max-width:320px; margin:0 auto; min-height:0;
-  }
+/* E-mail e endereço longos quebram de linha em vez de estourar o card */
+.contact-row{
+  overflow-wrap:anywhere;
+}
 
-  .agenda-art{ /* ilustração sobe para antes do texto */
-    order:-1; max-width:320px; margin:0 auto;
-  }      
-  .values, .mosaic{
-    grid-template-columns:1fr 1fr;
+/* ---------------------------------------------------------------------
+   11.2 HERO: foto do cachorro (a imagem é grande e "sai" do círculo)
+   O width:1000px está inline no HTML, por isso o !important nas larguras.
+   Agora vale para todas as telas acima de 900px (inclusive as grandes).
+   --------------------------------------------------------------------- */
+
+/* Acima de 900px: o cachorro fica CENTRALIZADO no círculo, com o topo alinhado ao topo do círculo
+   (a cabeça fica dentro do círculo e o corpo é cortado só pela base do hero).
+   Ele sai do fluxo (absolute) para o círculo voltar a ser um círculo perfeito.
+   --w     = largura do cachorro (1000px nas telas grandes, encolhe nas menores)
+   --shift = compensação horizontal. A imagem do cachorro tem o corpo um pouco deslocado dentro do PNG,
+             então ela é empurrada para a esquerda em proporção ao tamanho (-7,4% da largura = -74px quando
+             o cachorro tem 1000px). É a mesma posição do seu código original em telas grandes, e acompanha
+             o encolhimento nas menores. Para ajustar: use -.06 (menos para a esquerda) ou -.09 (mais). */
+@media (min-width:901px){
+  .hero-dog-img{
+    --w:min(1000px, calc(100vw - 640px));
+    --shift:calc(var(--w) * -.074);
+    position:absolute;
+    top:0;
+    left:calc(50% + var(--shift));
+    width:var(--w) !important;
+    max-width:none;
+    margin:0;
+    transform:translateX(-50%);
   }
 }
 
-/* horários: 3 colunas em telas muito estreitas */
+/* 901px a 1187px: o círculo acompanha a largura da tela, então o cachorro também */
+@media (min-width:901px) and (max-width:1187px){
+  .hero-dog-img{--w:calc(54.6vw - 55px);}   /* ~130% da largura do círculo */
+}
 
-@media (max-width:420px){.hours-grid{
-  grid-template-columns:repeat(3,1fr);
+/* ---------------------------------------------------------------------
+   11.3 SERVIÇOS: os 5 cards eram nowrap com min-width 240px (passavam de 1280px)
+   --------------------------------------------------------------------- */
+
+/* Abaixo de 1640px os 5 cards não cabem em linha única: quebram em 3 por linha
+   (a última linha fica centralizada). box-sizing evita que o padding aumente a largura. */
+@media (max-width:1639px){
+  .grid-cards{flex-wrap:wrap;}
+  .card{box-sizing:border-box; min-width:0; flex:0 1 calc((100% - 40px) / 3);}
+}
+
+/* ---------------------------------------------------------------------
+   11.4 RODAPÉ E AVALIAÇÕES (até 1100px)
+   --------------------------------------------------------------------- */
+@media (max-width:1100px){
+  /* Menu ocupa menos espaço */
+  .nav-right{gap:1rem; padding:0 24px;}
+  .nav-links{gap:1.2rem; font-size:.92rem;}
+
+  /* Rodapé: width:10% deixava as colunas de links estreitas demais */
+  .footer-links{width:auto; min-width:150px;}
+
+  /* Avaliações: foto + widget empilham, e as fotos (500x290 fixos) passam a ser fluidas */
+  #Avaliações .wrap > div{flex-direction:column;}                    /* container flex inline */
+  #Avaliações .wrap > div > div:first-child{width:100%; max-width:500px;}   /* coluna das fotos */
+  #Avaliações .wrap > div > div:last-child{width:100%;}                     /* widget do Google */
+  .spapet{width:100%; max-width:500px; height:auto; aspect-ratio:500/290;}
+}
+
+/* ---------------------------------------------------------------------
+   11.5 TABLET E CELULAR (até 900px): tudo em 1 coluna + menu hambúrguer
+   --------------------------------------------------------------------- */
+@media (max-width:900px){
+
+  /* --- Menu --- */
+  .nav-right{gap:12px; padding:0 16px;}
+  .brand-logo{width:140px;}
+  .nav-social{margin-left:auto;}              /* redes ficam coladas no hambúrguer */
+
+  /* Painel do menu: agora ancorado embaixo do cabeçalho (absolute) em vez de fixed
+     (o backdrop-filter do header quebra o position:fixed dos filhos) */
+  .nav-links{
+    position:absolute; top:100%; right:0; bottom:auto; left:0;
+    height:calc(100vh - 74px); height:calc(100dvh - 74px);
+    overflow-y:auto;
+    visibility:hidden;                        /* fechado: não aparece nem recebe foco do teclado */
+    transition:transform .5s ease, visibility 0s linear .5s;
   }
-}   
+  .nav-links.open{
+    visibility:visible;
+    transition:transform .5s ease;
+  }
+
+  /* --- Seções empilhadas (antes só empilhavam em 760px) --- */
+  .hero .wrap, #sobre .wrap, .contact-grid, #agendamento .wrap{
+    grid-template-columns:1fr;
+  }
+  section{padding:72px 0;}                    /* .hero tem padding próprio e não é afetado */
+  [class^="custom-shape-divider-top"] svg{height:40px;}   /* ondas mais baixas no celular */
+
+  /* --- Hero: o cachorro deixa de "sair" do círculo e passa a caber dentro dele --- */
+  .hero-inner{padding:56px 0 64px;}
+  .hero .wrap{gap:32px;}
+  .hero-photo{width:100%; max-width:380px; margin:0 auto; min-height:0;}
+  .hero-photo-ring{position:relative; width:100%; left:auto; bottom:auto; transform:none;}
+  .hero-dog-img{
+    position:absolute; inset:0;
+    width:100% !important; height:100%; max-width:100%;
+    margin:0; transform:none; object-fit:contain;
+  }
+
+  /* --- Cards de serviço: 2 por linha --- */
+  .card{flex:0 1 calc((100% - 20px) / 2);}
+
+  /* --- Sobre nós: tira as margens negativas das fotos (cortavam no topo) --- */
+  .chihuahua-img{margin:0; border-radius:32px;}
+
+  /* --- Agendamento: ilustração sobe para antes do texto (antes essa regra estava quebrada) --- */
+  .agenda-art{order:-1; width:100%; max-width:360px; margin:0 auto;}
+}
+
+/* ---------------------------------------------------------------------
+   11.6 CELULAR (até 600px)
+   --------------------------------------------------------------------- */
+@media (max-width:600px){
+  .card{flex:0 1 100%; padding:24px;}                     /* 1 card por linha */
+  .mosaic{gap:14px;}
+  .chihuahua-img, .spapet{border-radius:28px;}
+
+  /* Contato: cards com menos respiro lateral */
+  .contact-card, .map-card, .hours-card{padding:20px;}
+  .map-frame iframe{height:300px;}
+
+  /* Rodapé: marca em cima, duas colunas de links embaixo */
+  footer .wrap{gap:28px;}
+  footer .wrap > div:first-child{flex:1 1 100%;}
+  .footer-links{flex:1 1 40%; min-width:0;}
+}
+
+/* ---------------------------------------------------------------------
+   11.7 CELULARES PEQUENOS (até 480px)
+   --------------------------------------------------------------------- */
+@media (max-width:480px){
+  .values{grid-template-columns:1fr;}                    /* diferenciais em 1 coluna */
+  .hero-actions .btn, .social-ctas .btn{flex:1 1 100%; justify-content:center;}  /* botões largos */
+  .btn{padding:13px 22px;}
+}
+
+/* Horários: 3 colunas em telas muito estreitas (mantido) */
+@media (max-width:420px){
+  .hours-grid{grid-template-columns:repeat(3,1fr);}
+}
+
+
