@@ -28,8 +28,8 @@ bem-estar e hospedagem pet, oferecendo uma experiência para conhecer os serviç
 | :--- | :--- |
 | **🌍 Site** | `Site` |
 | **🎥 Vídeo de Apresentação** | `Video` |
-| **🔗 Domínio** | `Domínio` |
-| **☁️ Hospedagem** | `Hospedagem` |
+| **🔗 Domínio** | `Registro.br` |
+| **☁️ Hospedagem** | `GitHub Pages` |
 
 ---
 
