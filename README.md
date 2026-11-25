@@ -57,4 +57,4 @@ bem-estar e hospedagem pet, oferecendo uma experiência para conhecer os serviç
 | Saufi Phatar Micilien | `3026103388` |
 | João Pedro Monteiro Nascimento | `3025106009` |
 | Kervens Guillaume | `3026202865` |
-| Rodrigo Kelis | `Preencher RA` |
+| Rodrigo Kelis | `3026105862` |
