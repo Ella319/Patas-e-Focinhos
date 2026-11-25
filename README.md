@@ -26,7 +26,7 @@ bem-estar e hospedagem pet, oferecendo uma experiência para conhecer os serviç
 
 | Recurso | Informações |
 | :--- | :--- |
-| **🌍 Site** | [`patasefocinhos.com.br`(https://patasefocinhos.com.br/) |
+| **🌍 Site** | [`patasefocinhos.com.br`](https://patasefocinhos.com.br/) |
 | **🎥 Vídeo de Apresentação** | [`https://youtu.be/OimHbPHJSOY?si=wPAyk0iR8wIc0vZB`](https://youtu.be/OimHbPHJSOY?si=wPAyk0iR8wIc0vZB) |
 | **🔗 Domínio** | `Registro.br` |
 | **☁️ Hospedagem** | `GitHub Pages` |
